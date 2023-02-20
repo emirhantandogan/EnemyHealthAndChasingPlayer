@@ -45,7 +45,7 @@ public class EnemySystem : MonoBehaviour
         //Destroying enemy and creating blood
         if (enemyHealth <= 0) 
         {
-            Instantiate(blood);//blood is the particle effect
+            Instantiate(blood, transform.position, Quaternion.Identity);//blood is the particle effect
             Destroy(this.gameObject);
         }
     }
